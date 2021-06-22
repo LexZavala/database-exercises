@@ -30,6 +30,7 @@ SELECT CONCAT(first_name, ' ', last_name) FROM employees WHERE last_name LIKE 'E
 
 # 3 Find all employees born on Christmas — 842 rows.
 SELECT * FROM employees WHERE birth_date LIKE '____-12-25';
+SELECT * FROM employees WHERE DAY(birth_date) = 25 AND MONTH(birth_date) = 12;
 
 # 4 Find all employees hired in the 90s and born on Christmas — 362 rows.
 # 5 Change the query for employees hired in the 90s and born on Christmas such that the first result is the oldest employee who was hired last. It should be Khun Bernini.
