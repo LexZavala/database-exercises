@@ -14,6 +14,11 @@ SELECT MAX(DATEDIFF(hire_date, birth_date)/365) FROM employees;
 
 SELECT MIN(DATEDIFF(hire_date, birth_date)/365) FROM employees;
 
+SELECT CONCAT(first_name, ' ', last_name) AS Name, DATEDIFF(hire_date, birth_date)/365 AS 'Age when hired'
+FROM employees
+ORDER BY DATEDIFF(hire_date, birth_date)/365 DESC
+LIMIT 50;
+
 # GROUP BY combines duplicates into one single value for each group
 # GROUP BY consolidates rows based on a common column
 
@@ -28,4 +33,5 @@ SELECT COUNT(last_name), last_name  FROM employees
 WHERE last_name Like 'E%e'
 GROUP BY last_name
 ORDER BY last_name;
+
 
